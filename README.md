@@ -52,6 +52,7 @@ The knowledge base is editable in the app: terminology, approved facts with owne
 - Single-file web app in HTML, CSS and vanilla JavaScript, with no build step.
 - Rule and fact engine implemented in the browser (pattern rules, fact-sheet comparison with expiry dates, WCAG-style accessibility checks, Flesch readability).
 - Optional AI rewrite and messaging review through Claude, when available in the host environment.
+- Typography via Google Fonts (Cormorant Garamond, Inter) with system-font fallbacks.
 - State stored in the browser via `localStorage`.
 
 ## Run locally
@@ -62,6 +63,7 @@ Open `brandwarden.html` in any modern browser. No installation required.
 
 - Roles are simulated with a role switcher and are not backed by authentication.
 - Data is stored per browser and is not shared between users.
+- Fact and claim checks are pattern-based. They recognise common phrasings (for example `$29/month`, `$29 per month`, `4,000 customers`) but not every wording, such as spelled-out numbers.
 - Supports text content. Image, PDF and DOCX review and guideline import are not yet implemented.
 
 ## Roadmap
